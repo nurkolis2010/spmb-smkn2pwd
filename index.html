@@ -33,13 +33,13 @@
                             700: '#0369a1',   // Deep Ocean
                             800: '#075985',   // Navy Accent
                             900: '#0c4a6e',   // Dark Navy
-                            950: '#021e30'    // Deep Blue-Black Midnight
+                            950: '#031b2e'    // Deep Blue-Black Midnight (Murni Tanpa Campuran Hangat)
                         },
                         accent: {
                             light: '#e0f2fe',
                             sky: '#0284c7',
                             cyan: '#06b6d4',
-                            indigo: '#4f46e5',
+                            indigo: '#3b82f6',
                             blue: '#2563eb',
                             royal: '#1d4ed8'
                         }
@@ -51,7 +51,7 @@
     
     <style>
         .custom-glass {
-            background: rgba(12, 74, 110, 0.7);
+            background: rgba(3, 27, 46, 0.8);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(56, 189, 248, 0.15);
         }
@@ -59,19 +59,19 @@
             position: absolute;
             width: 450px;
             height: 450px;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, rgba(14, 165, 233, 0) 70%);
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(14, 165, 233, 0) 70%);
             pointer-events: none;
         }
         .hero-glow-2 {
             position: absolute;
             width: 350px;
             height: 350px;
-            background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, rgba(79, 70, 229, 0) 70%);
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, rgba(6, 182, 212, 0) 70%);
             pointer-events: none;
         }
         @keyframes pulse-slow {
             0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.08); }
+            50% { opacity: 0.7; transform: scale(1.05); }
         }
         .animate-pulse-slow {
             animation: pulse-slow 8s infinite ease-in-out;
@@ -80,6 +80,7 @@
 </head>
 <body class="bg-brand-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
 
+    <!-- -->
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 custom-glass border-b border-brand-800/30" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -95,12 +96,12 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center gap-8">
+                <div class="hidden lg:flex items-center gap-6">
                     <a href="#beranda" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Beranda</a>
-                    <a href="#jurusan" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Kompetensi Keahlian</a>
-                    <a href="#jalur" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Jalur &amp; Kuota</a>
-                    <a href="#jadwal" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Jadwal Resmi</a>
-                    <a href="#alur" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Alur SPMB</a>
+                    <a href="#jurusan" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Kompetensi</a>
+                    <a href="#alur" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Alur Pendaftaran</a>
+                    <a href="#jadwal" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Lini Masa</a>
+                    <a href="#jalur" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Kuota</a>
                     <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
                 </div>
 
@@ -123,9 +124,9 @@
         <div id="mobile-menu" class="hidden lg:hidden custom-glass border-t border-brand-800/30 shadow-2xl py-4 px-6 space-y-4">
             <a href="#beranda" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors border-b border-white/5">Beranda</a>
             <a href="#jurusan" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors border-b border-white/5">Kompetensi Keahlian</a>
+            <a href="#alur" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors border-b border-white/5">Alur Pendaftaran</a>
+            <a href="#jadwal" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors border-b border-white/5">Jadwal / Tanggal Penting</a>
             <a href="#jalur" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors border-b border-white/5">Jalur &amp; Kuota</a>
-            <a href="#jadwal" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors border-b border-white/5">Jadwal Resmi</a>
-            <a href="#alur" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors border-b border-white/5">Alur SPMB</a>
             <a href="#faq" class="block py-2 text-base font-medium text-slate-300 hover:text-white transition-colors">FAQ</a>
             <a href="https://nomerantrian.smkn2purwodadi.my.id" target="_blank" rel="noopener noreferrer" 
                class="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-accent-blue to-brand-500 text-white font-bold py-3 rounded-lg shadow-lg transition-all text-center">
@@ -135,14 +136,15 @@
         </div>
     </nav>
 
-    <section id="beranda" class="relative pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden flex items-center min-h-screen">
+    <!-- -->
+    <section id="beranda" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden flex items-center min-h-screen">
         <!-- Glowing Ambient Lights -->
         <div class="hero-glow-1 top-10 left-10 animate-pulse-slow"></div>
         <div class="hero-glow-2 bottom-10 right-10 animate-pulse-slow" style="animation-delay: 3s;"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-900/40 via-brand-950 to-brand-950 z-0"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-900/30 via-brand-950 to-brand-950 z-0"></div>
 
-        <!-- Tekstur Grid Wireframe untuk Nuansa Teknologi Modern -->
-        <div class="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay z-0">
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay z-0">
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                 <defs>
                     <pattern id="blue-grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -158,52 +160,48 @@
                 
                 <!-- Sisi Kiri: Pesan Selamat Datang & Judul Utama -->
                 <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-900/50 border border-brand-700/60 text-brand-300 text-xs sm:text-sm font-semibold mx-auto lg:mx-0">
-                        <span class="w-2.5 h-2.5 rounded-full bg-brand-400 animate-ping"></span>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-900/50 border border-brand-700/50 text-brand-300 text-xs sm:text-sm font-semibold mx-auto lg:mx-0">
+                        <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
                         <span>Sistem Penerimaan Murid Baru (SPMB) Jawa Tengah 2026/2027</span>
                     </div>
 
                     <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight">
                         Bangun Masa Depan <br class="hidden sm:inline" />
-                        Teknologi di <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-200 to-accent-cyan">SMKN 2 Purwodadi</span>
+                        Teknologi di <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent-cyan">SMKN 2 Purwodadi</span>
                     </h1>
 
                     <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Pusat keunggulan pendidikan vokasi di Kabupaten Grobogan. Menghasilkan lulusan yang siap bersaing secara global di dunia industri modern dengan kurikulum berbasis teknologi dan karakter unggul.
+                        Pusat keunggulan pendidikan vokasi di Kabupaten Grobogan. Menghasilkan lulusan kompeten yang siap bersaing secara global di dunia industri modern dengan kurikulum berbasis teknologi terdepan.
                     </p>
+
+                    <!-- Kampanye No Titip No Jastip -->
+                    <div class="flex items-center gap-3 bg-brand-900/40 border border-brand-800/60 p-3.5 rounded-xl max-w-md mx-auto lg:mx-0">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-950/80 border border-brand-500/30 flex items-center justify-center text-brand-400 shrink-0">
+                            <i class="fa-solid fa-ban text-lg"></i>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-white">Prinsip Integritas Jateng</h4>
+                            <p class="text-xs text-slate-300">"NGOPENI NGLAKONI" - Bersih, Jujur & Transparan (No Titip, No Jastip!).</p>
+                        </div>
+                    </div>
 
                     <!-- Tombol Navigasi Aksi Utama -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                         <a href="https://nomerantrian.smkn2purwodadi.my.id" target="_blank" rel="noopener noreferrer"
                            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent-blue to-accent-cyan hover:from-brand-600 hover:to-accent-blue text-white font-extrabold px-8 py-4 rounded-xl shadow-xl shadow-brand-500/20 hover:shadow-brand-500/40 transition-all transform hover:-translate-y-1 text-base">
                             <i class="fa-solid fa-clipboard-check text-xl"></i>
-                            <span>AMBIL ANTREAN SEKARANG</span>
+                            <span>AMBIL ANTREAN VERIFIKASI</span>
                         </a>
-                        <a href="#jadwal" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-900/60 hover:bg-brand-800/80 text-white border border-brand-700/80 font-semibold px-8 py-4 rounded-xl transition-all hover:border-brand-400 text-base">
-                            <span>Lihat Jadwal Resmi</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                        <a href="#alur" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-900/60 hover:bg-brand-800/80 text-white border border-brand-700/80 font-semibold px-8 py-4 rounded-xl transition-all hover:border-brand-400 text-base">
+                            <span>Pelajari Alur Pendaftaran</span>
+                            <i class="fa-solid fa-arrow-down"></i>
                         </a>
-                    </div>
-
-                    <!-- Lencana Statistik Sekolah -->
-                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-brand-800/55 max-w-lg mx-auto lg:mx-0">
-                        <div>
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-white">7</span>
-                            <span class="text-xs text-brand-300 font-medium uppercase tracking-wider">Kompetensi Ahli</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-white">75%</span>
-                            <span class="text-xs text-brand-300 font-medium uppercase tracking-wider font-bold">Jalur Prestasi</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-white">100%</span>
-                            <span class="text-xs text-brand-300 font-medium uppercase tracking-wider">Sistem Daring</span>
-                        </div>
                     </div>
                 </div>
 
+                <!-- Sisi Kanan: Widget Hitung Mundur -->
                 <div class="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none">
-                    <div class="bg-gradient-to-b from-brand-900/70 to-brand-950/95 rounded-2xl p-6 sm:p-8 border border-brand-700/40 shadow-2xl relative">
+                    <div class="bg-gradient-to-b from-brand-900/50 to-brand-950/90 rounded-2xl p-6 sm:p-8 border border-brand-800/40 shadow-2xl relative">
                         <!-- Top Banner Badge -->
                         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent-blue text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
                             Hitung Mundur Pembukaan
@@ -229,26 +227,26 @@
                                     <span class="text-[10px] sm:text-xs text-brand-300 font-semibold uppercase tracking-wider">Detik</span>
                                 </div>
                             </div>
-                            <p class="text-xs text-brand-300 italic">Menuju Pembuatan Akun Resmi SPMB Jateng: 3 Juni 2026 Pukul 00:00 WIB</p>
+                            <p class="text-xs text-brand-300 italic">Menuju Pengajuan & Pembuatan Akun: 03 Juni 2026 Pukul 00:00 WIB</p>
                         </div>
 
                         <!-- Info Board Ringkas -->
                         <div class="space-y-4 pt-6 border-t border-brand-800/50">
                             <h3 class="text-sm font-semibold text-slate-200 uppercase tracking-wider text-left flex items-center gap-2">
                                 <i class="fa-solid fa-circle-info text-brand-400"></i>
-                                Informasi Penting
+                                Informasi Portal Utama
                             </h3>
                             <div class="space-y-3 text-left">
                                 <div class="flex items-start gap-3 bg-brand-950/40 p-3 rounded-lg border border-brand-800/40">
                                     <i class="fa-solid fa-globe text-brand-400 mt-1"></i>
                                     <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                                        Pendaftaran akun, verifikasi dokumen, dan aktivasi dilakukan langsung melalui link resmi <a href="https://spmb.jatengprov.go.id" target="_blank" class="text-brand-300 underline font-bold hover:text-brand-400">spmb.jatengprov.go.id</a>.
+                                        Pendaftaran utama, pembuatan akun, dan pemilihan sekolah dilakukan melalui tautan resmi pemerintah Jawa Tengah: <a href="https://spmb.jatengprov.go.id" target="_blank" class="text-brand-300 underline font-bold hover:text-brand-400">spmb.jatengprov.go.id</a>.
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-3 bg-brand-950/40 p-3 rounded-lg border border-brand-800/40">
-                                    <i class="fa-solid fa-users text-brand-400 mt-1"></i>
+                                    <i class="fa-solid fa-users-viewfinder text-brand-400 mt-1"></i>
                                     <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                                        Untuk menghindari penumpukan saat verifikasi berkas luring di sekolah, harap mengambil antrean kedatangan di <span class="text-brand-300 font-semibold">nomerantrian.smkn2purwodadi.my.id</span>.
+                                        Antrean verifikasi luring di SMKN 2 Purwodadi wajib dipesan terlebih dahulu melalui laman resmi lokal sekolah: <span class="text-brand-300 font-semibold">nomerantrian.smkn2purwodadi.my.id</span>.
                                     </p>
                                 </div>
                             </div>
@@ -260,18 +258,19 @@
         </div>
     </section>
 
+    <!-- -->
     <section id="jurusan" class="py-24 bg-brand-900/10 relative border-t border-brand-900/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <div class="inline-block px-3 py-1 bg-brand-900/60 border border-brand-700/60 rounded-full text-brand-300 text-xs font-semibold uppercase tracking-widest">
-                    Pilihan Program Unggulan
+                    Pilihan Program Kejuruan
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                    7 Kompetensi Keahlian Masa Depan
+                    7 Kompetensi Keahlian Unggulan
                 </h2>
                 <p class="text-slate-400 text-base sm:text-lg">
-                    SMK Negeri 2 Purwodadi menyajikan program kejuruan modern yang telah bermitra erat dengan dunia kerja, dunia industri (DUDI), dan didukung laboratorium berstandar tinggi.
+                    SMKN 2 Purwodadi menyediakan program studi kejuruan relevan yang bermitra erat dengan dunia kerja, dunia industri (DUDI), dan didukung laboratorium modern.
                 </p>
             </div>
 
@@ -286,11 +285,11 @@
                         </div>
                         <h3 class="text-xl font-bold text-white">Desain Pemodelan &amp; Informasi Bangunan (DPIB)</h3>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Mempelajari rekayasa perencanaan gambar gedung, konstruksi interior, pemodelan 3D digital, estimasi anggaran biaya proyek, dan penerapan sistem teknologi informasi konstruksi (BIM).
+                            Mempelajari rekayasa perencanaan gambar konstruksi, estimasi anggaran biaya (RAB), pemodelan 3D digital, dan penerapan sistem teknologi Building Information Modeling (BIM).
                         </p>
                     </div>
                     <div class="pt-6 border-t border-brand-800/40 mt-6 flex justify-between items-center text-xs text-brand-300 font-semibold uppercase tracking-wider">
-                        <span>Bidang: Rekayasa Arsitektur</span>
+                        <span>Rekayasa Arsitektur</span>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -303,11 +302,11 @@
                         </div>
                         <h3 class="text-xl font-bold text-white">Teknik Komputer &amp; Jaringan (TKJ)</h3>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Fokus pada administrasi server, instalasi jaringan komputer (Fiber Optic/Wireless), routing &amp; switching kelas industri (Cisco/MikroTik), cloud computing, dan keamanan data siber.
+                            Fokus pada administrasi server, instalasi jaringan komputer (Fiber Optic/Wireless), routing &amp; switching kelas industri (MikroTik/Cisco), dan keamanan data siber.
                         </p>
                     </div>
                     <div class="pt-6 border-t border-brand-800/40 mt-6 flex justify-between items-center text-xs text-brand-300 font-semibold uppercase tracking-wider">
-                        <span>Bidang: Teknologi Informasi &amp; Jaringan</span>
+                        <span>Teknologi Informasi</span>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -320,11 +319,11 @@
                         </div>
                         <h3 class="text-xl font-bold text-white">Teknik Kendaraan Ringan (TKR)</h3>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Mempelajari pemeliharaan mesin kendaraan mobil, sistem injeksi bahan bakar elektronik (EFI), sistem rem bersensor, kelistrikan kendaraan, diagnosis mekanis komputer, dan sasis.
+                            Mempelajari pemeliharaan mesin otomotif mobil, sistem kelistrikan sasis, injeksi bahan bakar elektronik (EFI), diagnosis komputer, dan teknologi otomotif terkini.
                         </p>
                     </div>
                     <div class="pt-6 border-t border-brand-800/40 mt-6 flex justify-between items-center text-xs text-brand-300 font-semibold uppercase tracking-wider">
-                        <span>Bidang: Otomotif Mobil Industri</span>
+                        <span>Otomotif Mobil Industri</span>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -337,11 +336,11 @@
                         </div>
                         <h3 class="text-xl font-bold text-white">Teknik Sepeda Motor (TSM)</h3>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Pembekalan khusus teknik perbaikan mesin sepeda motor berkemampuan tinggi, sistem injeksi digital, kelistrikan sepeda motor otomatis, transmisi, dan teknologi kendaraan listrik baru.
+                            Keahlian khusus teknik perbaikan mesin sepeda motor berkemampuan tinggi, kelistrikan sepeda motor otomatis, dan pengenalan inovasi kendaraan listrik (EV).
                         </p>
                     </div>
                     <div class="pt-6 border-t border-brand-800/40 mt-6 flex justify-between items-center text-xs text-brand-300 font-semibold uppercase tracking-wider">
-                        <span>Bidang: Otomotif Roda Dua</span>
+                        <span>Otomotif Roda Dua</span>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -354,11 +353,11 @@
                         </div>
                         <h3 class="text-xl font-bold text-white">Teknik Instalasi Tenaga Listrik (TITL)</h3>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Belajar perancangan instalasi kelistrikan gedung modern, pemeliharaan panel daya industri, kontrol kelistrikan otomatis berbasis PLC, smart home, dan sumber energi terbarukan.
+                            Belajar perancangan instalasi listrik gedung, panel daya industri, pemrograman otomasi berbasis PLC, smart home, dan konversi energi terbarukan.
                         </p>
                     </div>
                     <div class="pt-6 border-t border-brand-800/40 mt-6 flex justify-between items-center text-xs text-brand-300 font-semibold uppercase tracking-wider">
-                        <span>Bidang: Otomasi &amp; Ketenagalistrikan</span>
+                        <span>Otomasi Kelistrikan</span>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -371,11 +370,11 @@
                         </div>
                         <h3 class="text-xl font-bold text-white">Teknik Konstruksi &amp; Perumahan (TKP)</h3>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Mempelajari manajemen pelaksanaan pembangunan rumah tinggal, beton bertulang pracetak, pemetaan struktur lahan, pengawasan mutu proyek sipil, dan wirausaha sipil mandiri.
+                            Mempelajari manajemen pelaksanaan konstruksi bangunan rumah tinggal, beton bertulang pracetak, pemetaan tanah, dan teknik kewirausahaan konstruksi mandiri.
                         </p>
                     </div>
                     <div class="pt-6 border-t border-brand-800/40 mt-6 flex justify-between items-center text-xs text-brand-300 font-semibold uppercase tracking-wider">
-                        <span>Bidang: Pembangunan Sipil &amp; Hunian</span>
+                        <span>Pembangunan Sipil</span>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -388,11 +387,11 @@
                         </div>
                         <h3 class="text-xl font-bold text-white">Teknik Bodi Kendaraan Ringan (TBKR)</h3>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            Keahlian khusus teknik perbaikan bodi mobil penyok, restorasi kelengkapan eksterior, pengelasan bodi, teknologi pengecatan terkini (spray painting), dan detailing estetika mobil.
+                            Keahlian khusus teknik perbaikan panel bodi penyok, pengecatan otomotif profesional (spray painting), restorasi eksterior, dan detailing estetika mobil.
                         </p>
                     </div>
                     <div class="pt-6 border-t border-brand-800/40 mt-6 flex justify-between items-center text-xs text-brand-300 font-semibold uppercase tracking-wider">
-                        <span>Bidang: Body Repair &amp; Finishing</span>
+                        <span>Body Repair &amp; Finishing</span>
                         <i class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -401,18 +400,519 @@
         </div>
     </section>
 
+    <!-- -->
+    <section id="alur" class="py-24 bg-brand-950 relative border-t border-brand-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 bg-brand-900/60 border border-brand-700/60 rounded-full text-brand-400 text-xs font-semibold uppercase tracking-widest">
+                    Transkrip ALUR PENDAFTARAN.jpg
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    10 Tahapan Alur PPDB / SPMB Jateng
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Berikut adalah seluruh prosedur resmi pendaftaran daring (online) dan verifikasi dokumen luring (offline) yang wajib diikuti oleh seluruh Calon Murid (CM).
+                </p>
+            </div>
+
+            <!-- Steps Grid (10 Steps) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Step 1 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">01</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-book-open"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Memahami Aturan</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Calon murid membaca dan memahami ketentuan penyelenggaraan SPMB SMA Negeri dan SMK Negeri secara saksama.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-circle-info"></i> Tahap Persiapan
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">02</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-folder-open"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Siapkan Dokumen</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Calon murid menyiapkan seluruh berkas persyaratan pendaftaran asli yang telah ditentukan untuk pengunggahan.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-file-shield"></i> Berkas Berkas
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">03</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-globe"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Akses Laman Resmi</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Calon murid membuka situs portal resmi SPMB Daring Jateng melalui alamat domain <a href="https://spmb.jatengprov.go.id" target="_blank" class="text-brand-300 underline font-semibold">spmb.jatengprov.go.id</a>.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-laptop"></i> Portal Online
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">04</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-user-pen"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Isi Data Diri</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Calon murid melakukan input biodata pribadi secara teliti dan sesuai dengan alur pada sistem aplikasi SPMB.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-address-card"></i> Validasi NIK
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">05</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Unggah &amp; Ajukan</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Mengunggah dokumen persyaratan pada sistem SPMB, lalu mengunduh dokumen tanda bukti pengajuan akun pendaftaran.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-file-import"></i> Unduh Bukti
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">06</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-users"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Verifikasi Fisik</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Calon murid melakukan verifikasi berkas secara langsung/luring di sekolah terdekat/pilihan dengan membawa berkas asli.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-handshake"></i> Loket Sekolah
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">07</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-key"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Pemberian Token</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pihak operator sekolah melakukan validasi berkas. Jika sesuai ketentuan, calon murid akan diberikan kode Token Aktivasi.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-lock-open"></i> Akses Akun
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">08</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-circle-exclamation"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Perbaikan Berkas</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Jika berkas pendaftar belum sesuai syarat, calon murid diberi waktu melengkapinya kembali hingga mendapatkan Token Aktivasi.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-rotate"></i> Koreksi Ulang
+                    </div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">09</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-school"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Pilih Peminatan</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Setelah akun berhasil diaktivasi, calon murid dapat memilih sekolah dan kompetensi keahlian impian sesuai jadwal.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-building-user"></i> Memilih Jurusan
+                    </div>
+                </div>
+
+                <!-- Step 10 -->
+                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl font-black text-brand-600/50">10</span>
+                            <span class="w-8 h-8 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-400 text-sm"><i class="fa-solid fa-chart-line"></i></span>
+                        </div>
+                        <h4 class="text-sm font-bold text-white mb-2">Pantau Jurnal</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Calon murid secara aktif dapat melihat atau memantau jurnal pemeringkatan harian melalui sistem aplikasi daring SPMB.
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-brand-400 mt-4 font-bold uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-eye"></i> Hasil Seleksi
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Integrasi Khusus dengan Antrean Lokal Sekolah (nomerantrian.smkn2purwodadi.my.id) -->
+            <div class="mt-12 bg-gradient-to-r from-brand-900/40 to-brand-950 rounded-2xl p-6 sm:p-8 border border-brand-800/50 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2 justify-center md:justify-start">
+                        <i class="fa-solid fa-clipboard-check text-brand-400"></i>
+                        Pendaftaran Sesi Antrean (Langkah 06)
+                    </h3>
+                    <p class="text-sm text-slate-300 max-w-xl">
+                        Untuk memperlancar proses Verifikasi Berkas Luring di SMKN 2 Purwodadi, harap daftarkan waktu kehadiran Anda pada sistem reservasi antrean digital kami.
+                    </p>
+                </div>
+                <a href="https://nomerantrian.smkn2purwodadi.my.id" target="_blank" rel="noopener noreferrer" 
+                   class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent-blue to-brand-500 hover:from-brand-600 hover:to-accent-blue text-white font-extrabold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>AMBIL ANTRIAN SEKARANG</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- -->
+    <section id="jadwal" class="py-24 bg-brand-900/10 relative border-t border-brand-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-block px-3 py-1 bg-brand-900/60 border border-brand-700/60 rounded-full text-brand-300 text-xs font-semibold uppercase tracking-widest">
+                    Transkrip FLEYER 2.jpg.jpeg
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Tanggal Penting Lini Masa SPMB 2026
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Agenda lengkap proses penerimaan peserta didik baru tahun ajaran 2026/2027 berdasarkan maklumat Dinas Pendidikan Provinsi Jawa Tengah.
+                </p>
+            </div>
+
+            <!-- Timeline Agenda (12 Key Dates) -->
+            <div class="max-w-4xl mx-auto">
+                <div class="relative border-l border-brand-800 space-y-10 pl-6 sm:pl-10">
+                    
+                    <!-- Agenda 1 -->
+                    <div class="relative" id="agenda-1">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-400 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-400" id="dot-1"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>01. Pengumuman Resmi SPMB 2026</span>
+                                    <span class="bg-brand-800 text-brand-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-1">Selesai</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-300 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    18 Mei 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Pengumuman resmi petunjuk teknis pelaksanaan SPMB SMAN & SMKN Jawa Tengah 2026/2027.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 2 -->
+                    <div class="relative" id="agenda-2">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-500 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-500" id="dot-2"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>02. Pengajuan &amp; Pembuatan Akun</span>
+                                    <span class="bg-brand-500/20 text-brand-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-2">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    03 Juni - 12 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Calon Murid (CM) melakukan proses input data diri mandiri di portal untuk membuat akun pendaftaran.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 3 -->
+                    <div class="relative" id="agenda-3">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-3"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>03. Verifikasi Berkas Fisik</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-3">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    04 Juni - 13 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Penyerahan fisik berkas syarat pendaftaran kepada panitia operator sekolah penerima untuk validasi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 4 -->
+                    <div class="relative" id="agenda-4">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-4"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>04. Aktivasi Akun Mandiri</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-4">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    04 Juni - 13 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Melakukan aktivasi akun menggunakan kode Token yang didapatkan setelah verifikasi fisik lolos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 5 -->
+                    <div class="relative" id="agenda-5">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-5"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>05. Sinkronisasi Basis Data</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-5">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    14 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Pengolahan dan penyelarasan data pendaftar pada server pusat Dinas Pendidikan Provinsi Jawa Tengah.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 6 -->
+                    <div class="relative" id="agenda-6">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-6"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>06. Pendaftaran &amp; Pemilihan Sekolah</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-6">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    15 Juni - 18 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Pemilihan sekolah tujuan serta opsi perubahan pilihan jurusan di SMKN 2 Purwodadi sebelum pendaftaran ditutup.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 7 -->
+                    <div class="relative" id="agenda-7">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-7"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>07. Evaluasi Sistem &amp; Masa Tenang</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-7">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    19 Juni - 20 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Masa tenang seleksi dan pengolahan perangkingan data pendaftar akhir oleh panitia pusat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 8 -->
+                    <div class="relative" id="agenda-8">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-8"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>08. Pengumuman Hasil Kelulusan Seleksi</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-8">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    21 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Rilis daftar kelulusan resmi siswa baru yang diterima di SMK Negeri 2 Purwodadi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 9 -->
+                    <div class="relative" id="agenda-9">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-9"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>09. Daftar Ulang Pendaftar Utama</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-9">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    22 Juni - 25 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Proses registrasi administratif bagi calon murid utama yang dinyatakan lulus seleksi resmi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 10 -->
+                    <div class="relative" id="agenda-10">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-10"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>10. Pengumuman Kelulusan Cadangan</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-10">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    26 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Pengumuman resmi alokasi kursi kosong yang diisi oleh calon pendaftar dengan status cadangan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 11 -->
+                    <div class="relative" id="agenda-11">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-11"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>11. Daftar Ulang Cadangan</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-11">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    29 Juni - 30 Juni 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Registrasi administratif susulan khusus bagi pendaftar cadangan yang dinyatakan berhak diterima.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Agenda 12 -->
+                    <div class="relative" id="agenda-12">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-12"></span>
+                        </div>
+                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                    <span>12. Hari Pertama Masuk Sekolah</span>
+                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-12">Mendatang</span>
+                                </h3>
+                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5 shrink-0">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    13 Juli 2026
+                                </span>
+                            </div>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Pembukaan kegiatan belajar mengajar (KBM) masa pengenalan lingkungan sekolah (MPLS) Tahun Ajaran 2026/2027.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -->
     <section id="jalur" class="py-24 bg-brand-950 relative border-t border-brand-900/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <div class="inline-block px-3 py-1 bg-brand-900/60 border border-brand-700/60 rounded-full text-brand-400 text-xs font-semibold uppercase tracking-widest">
-                    Regulasi Kuota SMK Negeri
+                    Regulasi Penerimaan Kuota
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                     Jalur Pendaftaran &amp; Persentase Kuota
                 </h2>
                 <p class="text-slate-400 text-base sm:text-lg">
-                    Merujuk pada Keputusan Dinas Pendidikan dan Kebudayaan Provinsi Jawa Tengah tahun 2026, pendaftaran jenjang SMK Negeri dialokasikan ke dalam 3 jalur berikut.
+                    Pembagian kuota alokasi kursi penerimaan jenjang SMK Negeri se-Jawa Tengah diatur secara objektif ke dalam 3 jalur seleksi.
                 </p>
             </div>
 
@@ -428,7 +928,7 @@
                                 <span class="bg-brand-500/10 text-brand-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Minimal 75%</span>
                                 <h3 class="text-xl font-bold text-white mt-2">Jalur Prestasi</h3>
                                 <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-                                    Merupakan jalur seleksi utama berdasarkan akumulasi nilai rapor SMP/sederajat semester 1 s.d 5 ditambah poin penghargaan kejuaraan resmi di bidang akademis/non-akademis jika ada.
+                                    Metode seleksi utama berdasarkan akumulasi nilai rapor SMP/Mts sederajat semester 1 s.d 5 ditambah bobot poin piagam penghargaan kejuaraan resmi jika ada.
                                 </p>
                             </div>
                             <div class="w-16 h-16 bg-brand-500/10 rounded-full flex items-center justify-center text-brand-300 shrink-0 text-2xl font-black border border-brand-500/25">
@@ -441,10 +941,10 @@
                     <div class="bg-brand-900/10 rounded-2xl p-6 border-l-4 border-accent-cyan border-y border-r border-brand-800/30 hover:bg-brand-900/20 transition-all">
                         <div class="flex items-start justify-between gap-4">
                             <div>
-                                <span class="bg-accent-cyan/10 text-accent-cyan text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Minimal 15%</span>
+                                <span class="bg-accent-cyan/10 text-accent-cyan text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Maksimal 15%</span>
                                 <h3 class="text-xl font-bold text-white mt-2">Jalur Afirmasi</h3>
                                 <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-                                    Dikhususkan untuk calon siswa baru dari keluarga kurang mampu (terdaftar di DTSEN/KIP/DTKS), yatim/piatu, Anak Tidak Sekolah (ATS) agar kembali bersekolah, serta penyandang disabilitas ringan yang lolos verifikasi fisik.
+                                    Ditujukan untuk pendaftar keluarga kurang mampu yang terdaftar DTKS/KIP, yatim/piatu, Anak Tidak Sekolah (ATS) agar bersekolah kembali, dan disabilitas ringan.
                                 </p>
                             </div>
                             <div class="w-16 h-16 bg-accent-cyan/10 rounded-full flex items-center justify-center text-accent-cyan shrink-0 text-2xl font-black border border-accent-cyan/25">
@@ -460,7 +960,7 @@
                                 <span class="bg-accent-blue/10 text-brand-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Maksimal 10%</span>
                                 <h3 class="text-xl font-bold text-white mt-2">Jalur Domisili Terdekat</h3>
                                 <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-                                    Diperuntukkan bagi pendaftar yang memiliki jarak alamat tinggal (sesuai Kartu Keluarga validitas minimal 1 tahun) paling dekat dengan lokasi SMKN 2 Purwodadi.
+                                    Dihitung berdasarkan radius terdekat koordinat alamat Kartu Keluarga (KK) sah yang terbit minimal 1 tahun ke titik koordinat SMKN 2 Purwodadi.
                                 </p>
                             </div>
                             <div class="w-16 h-16 bg-accent-blue/10 rounded-full flex items-center justify-center text-brand-400 shrink-0 text-2xl font-black border border-accent-blue/25">
@@ -474,20 +974,20 @@
                 <div class="lg:col-span-5 bg-brand-900/20 p-6 sm:p-8 rounded-2xl border border-brand-800/40 shadow-2xl relative">
                     <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
                         <i class="fa-solid fa-calculator text-brand-400"></i>
-                        Simulasi Alokasi Pagu Jurusan
+                        Simulator Kursi PPDB Mandiri
                     </h3>
                     <p class="text-xs text-slate-400 leading-relaxed mb-6">
-                        Masukkan estimasi total daya tampung (kuota kursi pendaftar) di bawah untuk memprediksi jumlah penerimaan tiap jalur secara dinamis sesuai petunjuk teknis.
+                        Masukkan estimasi jumlah total daya tampung (pagu) pendaftaran di bawah ini untuk melihat perkiraan pembagian alokasi kuota penerimaan tiap jalur.
                     </p>
 
                     <!-- Input Total Kuota -->
                     <div class="space-y-6">
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Total Daya Tampung (Siswa):</label>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Total Daya Tampung (Pagu):</label>
                             <div class="relative">
                                 <input type="number" id="input-quota" value="720" min="50" max="2000"
                                        class="w-full bg-brand-950 border border-brand-800/80 hover:border-brand-600 focus:border-brand-400 focus:ring-1 focus:ring-brand-400 text-white font-extrabold px-4 py-3 rounded-xl outline-none transition-all text-xl" />
-                                <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-sm text-slate-400 font-bold">CPD</span>
+                                <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-sm text-slate-400 font-bold">Siswa</span>
                             </div>
                         </div>
 
@@ -529,8 +1029,8 @@
 
                         <div class="bg-brand-950/60 border border-brand-800/60 rounded-xl p-4 mt-4 text-center">
                             <span class="block text-xs text-slate-300 leading-relaxed">
-                                <i class="fa-solid fa-circle-exclamation text-brand-400 mr-1"></i>
-                                Kuota final yang berlaku secara resmi adalah yang tercantum pada sistem portal web <a href="https://spmb.jatengprov.go.id" class="text-brand-300 font-semibold underline hover:text-brand-400">spmb.jatengprov.go.id</a>.
+                                <i class="fa-solid fa-triangle-exclamation text-brand-400 mr-1"></i>
+                                Kuota final resmi yang mengikat adalah yang dipublikasikan pada sistem sistem utama web <a href="https://spmb.jatengprov.go.id" class="text-brand-300 font-semibold underline hover:text-brand-400">spmb.jatengprov.go.id</a>.
                             </span>
                         </div>
                     </div>
@@ -540,284 +1040,19 @@
         </div>
     </section>
 
-    <section id="jadwal" class="py-24 bg-brand-900/10 relative border-t border-brand-900/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <div class="inline-block px-3 py-1 bg-brand-900/60 border border-brand-700/60 rounded-full text-brand-300 text-xs font-semibold uppercase tracking-widest">
-                    Lini Masa Agenda Dinas
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                    Jadwal Resmi SPMB Jawa Tengah 2026
-                </h2>
-                <p class="text-slate-400 text-base sm:text-lg">
-                    Berikut merupakan jadwal pendaftaran resmi yang dikeluarkan oleh Dinas Pendidikan Provinsi Jawa Tengah untuk Tahun Ajaran 2026/2027.
-                </p>
-            </div>
-
-            <!-- Timeline Agenda Luring & Daring -->
-            <div class="max-w-4xl mx-auto">
-                <div class="relative border-l border-brand-800 space-y-10 pl-6 sm:pl-10">
-                    
-                    <!-- Agenda 1 -->
-                    <div class="relative" id="agenda-1">
-                        <!-- Dot Penanda Aktif -->
-                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-400 flex items-center justify-center">
-                            <span class="w-2.5 h-2.5 rounded-full bg-brand-400" id="dot-1"></span>
-                        </div>
-                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                    <span>Pengajuan Akun</span>
-                                    <span class="bg-brand-800/80 text-brand-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-1">Mendatang</span>
-                                </h3>
-                                <span class="text-xs sm:text-sm font-semibold text-brand-300 flex items-center gap-1.5">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    03 Juni - 12 Juni 2026
-                                </span>
-                            </div>
-                            <p class="text-sm text-slate-300 leading-relaxed">
-                                Calon Murid (CM) melakukan pengajuan akun secara mandiri melalui laman resmi portal pendaftaran.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 2 -->
-                    <div class="relative" id="agenda-2">
-                        <!-- Dot Penanda Aktif -->
-                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-500 flex items-center justify-center">
-                            <span class="w-2.5 h-2.5 rounded-full bg-brand-500" id="dot-2"></span>
-                        </div>
-                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                    <span>Verifikasi Akun</span>
-                                    <span class="bg-brand-500/20 text-brand-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-2">Mendatang</span>
-                                </h3>
-                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    04 Juni - 13 Juni 2026
-                                </span>
-                            </div>
-                            <p class="text-sm text-slate-300 leading-relaxed">
-                                Admin operator sekolah melakukan pemeriksaan dan verifikasi akun dari berkas pengajuan pendaftar.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 3 -->
-                    <div class="relative" id="agenda-3">
-                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
-                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-3"></span>
-                        </div>
-                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                    <span>Aktivasi Akun</span>
-                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-3">Mendatang</span>
-                                </h3>
-                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    04 Juni - 13 Juni 2026
-                                </span>
-                            </div>
-                            <p class="text-sm text-slate-300 leading-relaxed">
-                                Calon Murid (CM) melakukan aktivasi akun secara mandiri setelah pengajuan berhasil diverifikasi.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 4 -->
-                    <div class="relative" id="agenda-4">
-                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
-                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-4"></span>
-                        </div>
-                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                    <span>Daftar Sekolah</span>
-                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-4">Mendatang</span>
-                                </h3>
-                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    15 Juni - 18 Juni 2026
-                                </span>
-                            </div>
-                            <p class="text-sm text-slate-300 leading-relaxed">
-                                Calon Murid (CM) secara aktif memilih sekolah dan kompetensi keahlian yang diminati melalui sistem portal.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 5 -->
-                    <div class="relative" id="agenda-5">
-                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
-                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-5"></span>
-                        </div>
-                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                    <span>Hasil Seleksi SPMB</span>
-                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-5">Mendatang</span>
-                                </h3>
-                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    21 Juni 2026
-                                </span>
-                            </div>
-                            <p class="text-sm text-slate-300 leading-relaxed">
-                                Pengumuman resmi hasil kelulusan seleksi SPMB Jawa Tengah.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 6 -->
-                    <div class="relative" id="agenda-6">
-                        <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-brand-950 border-4 border-brand-800 flex items-center justify-center">
-                            <span class="w-2.5 h-2.5 rounded-full bg-brand-800" id="dot-6"></span>
-                        </div>
-                        <div class="bg-brand-900/20 hover:bg-brand-900/30 p-6 rounded-2xl border border-brand-800/40 transition-all">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                                <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                    <span>Daftar Ulang</span>
-                                    <span class="bg-brand-800/40 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider" id="status-6">Mendatang</span>
-                                </h3>
-                                <span class="text-xs sm:text-sm font-semibold text-brand-400 flex items-center gap-1.5">
-                                    <i class="fa-regular fa-calendar-days"></i>
-                                    22 Juni - 25 Juni 2026
-                                </span>
-                            </div>
-                            <p class="text-sm text-slate-300 leading-relaxed">
-                                Calon Murid (CM) melakukan pendaftaran ulang dengan melengkapi administrasi fisik secara langsung di sekolah penerima.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="alur" class="py-24 bg-brand-950 relative border-t border-brand-900/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <div class="inline-block px-3 py-1 bg-brand-900/60 border border-brand-700/60 rounded-full text-brand-400 text-xs font-semibold uppercase tracking-widest">
-                    Prosedur Pendaftaran
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                    Alur Praktis Pendaftaran Siswa Baru
-                </h2>
-                <p class="text-slate-400 text-base sm:text-lg">
-                    Ikuti 5 langkah terstruktur berikut dari rumah sampai verifikasi berkas di sekolah agar proses berjalan efisien.
-                </p>
-            </div>
-
-            <!-- Steps Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <!-- Step 1 -->
-                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
-                    <div>
-                        <div class="text-4xl font-black text-brand-700/40 mb-4">01</div>
-                        <h3 class="text-base font-bold text-white mb-2">Buat Akun</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Akses web resmi spmb.jatengprov.go.id, daftarkan akun baru secara daring, dan masukkan data kependudukan pendaftar.
-                        </p>
-                    </div>
-                    <div class="text-xs text-brand-400 mt-4 font-semibold uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-display"></i> Daring (Online)
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
-                    <div>
-                        <div class="text-4xl font-black text-brand-700/40 mb-4">02</div>
-                        <h3 class="text-base font-bold text-white mb-2">Nomor Antrean</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Ambil sesi antrean kehadiran di nomerantrian.smkn2purwodadi.my.id agar pelaksanaan tes fisik di sekolah tidak memicu kerumunan panjang.
-                        </p>
-                    </div>
-                    <div class="text-xs text-brand-400 mt-4 font-semibold uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-ticket"></i> Portal Antrean
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
-                    <div>
-                        <div class="text-4xl font-black text-brand-700/40 mb-4">03</div>
-                        <h3 class="text-base font-bold text-white mb-2">Verifikasi Dokumen</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Kunjungi SMKN 2 Purwodadi sesuai jam sesi antrean untuk verifikasi dokumen fisik pendaftaran dan mengikuti tes kesehatan dasar.
-                        </p>
-                    </div>
-                    <div class="text-xs text-brand-400 mt-4 font-semibold uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-school"></i> Luring (Sekolah)
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
-                    <div>
-                        <div class="text-4xl font-black text-brand-700/40 mb-4">04</div>
-                        <h3 class="text-base font-bold text-white mb-2">Pilih Peminatan</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Setelah aktivasi akun, login dan pilih jurusan impian Anda di SMKN 2 Purwodadi. Pantau jurnalisasi ranking setiap harinya.
-                        </p>
-                    </div>
-                    <div class="text-xs text-brand-400 mt-4 font-semibold uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-chart-column"></i> Daring (Online)
-                    </div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="bg-brand-900/10 rounded-2xl p-6 border border-brand-800/40 flex flex-col justify-between hover:border-brand-500/30 transition-all">
-                    <div>
-                        <div class="text-4xl font-black text-brand-700/40 mb-4">05</div>
-                        <h3 class="text-base font-bold text-white mb-2">Daftar Ulang</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Apabila nama Anda masuk di jurnal kelulusan final pada 21 Juni, laksanakan registrasi ulang langsung di loket pendaftaran sekolah.
-                        </p>
-                    </div>
-                    <div class="text-xs text-brand-400 mt-4 font-semibold uppercase tracking-wider flex items-center gap-1">
-                        <i class="fa-solid fa-circle-check"></i> Selesai
-                    </div>
-                </div>
-            </div>
-
-            <!-- Integrasi Portal Antrean Digital -->
-            <div class="mt-12 bg-gradient-to-r from-brand-900/40 to-brand-950 rounded-2xl p-6 sm:p-8 border border-brand-800/50 flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="space-y-2 text-center md:text-left">
-                    <h3 class="text-lg font-bold text-white flex items-center gap-2 justify-center md:justify-start">
-                        <i class="fa-solid fa-microchip text-brand-400"></i>
-                        Teknologi Antrean Terintegrasi SMKN2
-                    </h3>
-                    <p class="text-sm text-slate-300 max-w-xl">
-                        Kami menjamin kenyamanan Anda selama mengurus dokumen fisik secara luring. Cukup klik tombol ambil antrean dan datanglah sesuai dengan alokasi waktu yang dipesan.
-                    </p>
-                </div>
-                <a href="https://nomerantrian.smkn2purwodadi.my.id" target="_blank" rel="noopener noreferrer" 
-                   class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent-blue to-brand-500 hover:from-brand-600 hover:to-accent-blue text-white font-extrabold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-ticket-simple"></i>
-                    <span>AMBIL ANTRIAN VERIFIKASI</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
+    <!-- -->
     <section id="faq" class="py-24 bg-brand-900/10 relative border-t border-brand-900/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                 <div class="inline-block px-3 py-1 bg-brand-900/60 border border-brand-700/60 rounded-full text-brand-400 text-xs font-semibold uppercase tracking-widest">
-                    Pusat Bantuan Informasi
+                    Pusat Hub Bantuan
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                     Pertanyaan Umum Pendaftar
                 </h2>
                 <p class="text-slate-400 text-base sm:text-lg">
-                    Berikut adalah jawaban cepat atas pertanyaan yang paling sering diajukan mengenai SPMB SMKN 2 Purwodadi.
+                    Temukan solusi instan atas kendala teknis administrasi seputar pendaftaran mandiri di SMKN 2 Purwodadi.
                 </p>
             </div>
 
@@ -827,55 +1062,44 @@
                 <!-- FAQ 1 -->
                 <div class="bg-brand-900/20 border border-brand-800/40 rounded-2xl overflow-hidden transition-all duration-300">
                     <button class="w-full text-left px-6 py-5 flex justify-between items-center gap-4 text-white hover:bg-brand-800/30 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-bold text-sm sm:text-base">1. Apa fungsi dari web nomerantrian.smkn2purwodadi.my.id?</span>
+                        <span class="font-bold text-sm sm:text-base">1. Mengapa saya harus mendaftar antrean di nomerantrian.smkn2purwodadi.my.id?</span>
                         <i class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
                     </button>
                     <div class="px-6 pb-5 text-sm text-slate-300 border-t border-brand-800/30 pt-4 hidden">
-                        Portal antrean tersebut digunakan agar pendaftar dapat memesan tiket kehadiran (sesi/jam tertentu) ke SMKN 2 Purwodadi. Hal ini bertujuan untuk kelancaran jalannya verifikasi berkas fisik dan pengukuran tinggi badan/tes buta warna secara terstruktur demi kenyamanan bersama.
+                        Layanan pemesanan antrean online digunakan khusus untuk proses verifikasi berkas fisik (Langkah 06) serta pemeriksaan fisik kesehatan pendaftar di SMKN 2 Purwodadi agar tertib, terjadwal, dan menghindari kerumunan panjang di loket sekolah.
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
                 <div class="bg-brand-900/20 border border-brand-800/40 rounded-2xl overflow-hidden transition-all duration-300">
                     <button class="w-full text-left px-6 py-5 flex justify-between items-center gap-4 text-white hover:bg-brand-800/30 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-bold text-sm sm:text-base">2. Apakah pendaftaran SMK Negeri menerapkan aturan zonasi ketat?</span>
+                        <span class="font-bold text-sm sm:text-base">2. Apakah penerimaan SMK menggunakan sistem zonasi wilayah?</span>
                         <i class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
                     </button>
                     <div class="px-6 pb-5 text-sm text-slate-300 border-t border-brand-800/30 pt-4 hidden">
-                        Berbeda dengan SMA, penerimaan pada SMK Negeri se-Jawa Tengah tidak memberlakukan zonasi jarak tinggal absolut. Kuota utama disaring dari <span class="text-white font-semibold">Jalur Prestasi Nilai Rapor (minimal 75%)</span>. Pilihan kuota domisili terdekat dibatasi hanya maksimal 10%.
+                        Tidak. Sesuai regulasi Dinas Pendidikan Jawa Tengah, jalur utama seleksi SMK Negeri adalah **Jalur Prestasi Nilai Rapor (minimal 75%)** yang menjaring siswa berdasar prestasi akademik, bukan jarak rumah. Kuota domisili terdekat dibatasi maksimal hanya 10%.
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
                 <div class="bg-brand-900/20 border border-brand-800/40 rounded-2xl overflow-hidden transition-all duration-300">
                     <button class="w-full text-left px-6 py-5 flex justify-between items-center gap-4 text-white hover:bg-brand-800/30 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-bold text-sm sm:text-base">3. Apakah berkas kelengkapan pendaftaran tidak memakai SKTM lagi?</span>
+                        <span class="font-bold text-sm sm:text-base">3. Berkas apa saja yang perlu dibawa saat verifikasi luring?</span>
                         <i class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
                     </button>
                     <div class="px-6 pb-5 text-sm text-slate-300 border-t border-brand-800/30 pt-4 hidden">
-                        Benar. Jalur Afirmasi SPMB Jateng 2026 tidak perlu melampirkan Surat Keterangan Tidak Mampu (SKTM) manual. Seluruh data ekonomi pendaftar kurang mampu ditarik secara otomatis berdasarkan sinkronisasi database dari DTSEN/DTKS atau kepemilikan Kartu Indonesia Pintar (KIP).
+                        Calon murid wajib membawa berkas asli berupa: Kartu Keluarga (KK), Buku Rapor SMP asli, Surat Keterangan Nilai Rapor Semester 1 s.d 5, Piagam Penghargaan asli (jika mengajukan), serta Bukti Cetak Pengajuan Akun yang diperoleh dari portal online.
                     </div>
                 </div>
 
                 <!-- FAQ 4 -->
                 <div class="bg-brand-900/20 border border-brand-800/40 rounded-2xl overflow-hidden transition-all duration-300">
                     <button class="w-full text-left px-6 py-5 flex justify-between items-center gap-4 text-white hover:bg-brand-800/30 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-bold text-sm sm:text-base">4. Apa saja tes fisik wajib di SMKN 2 Purwodadi?</span>
+                        <span class="font-bold text-sm sm:text-base">4. Bagaimana jika saya terlambat menghadiri jam sesi tiket antrean?</span>
                         <i class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
                     </button>
                     <div class="px-6 pb-5 text-sm text-slate-300 border-t border-brand-800/30 pt-4 hidden">
-                        Calon siswa baru wajib mengikuti verifikasi pemeriksaan fisik bebas buta warna (untuk seluruh jurusan teknik), memiliki tinggi badan proporsional demi standar keselamatan kerja, serta dipastikan tidak bertato atau bertindik bagi calon siswa laki-laki.
-                    </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div class="bg-brand-900/20 border border-brand-800/40 rounded-2xl overflow-hidden transition-all duration-300">
-                    <button class="w-full text-left px-6 py-5 flex justify-between items-center gap-4 text-white hover:bg-brand-800/30 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                        <span class="font-bold text-sm sm:text-base">5. Bagaimana jika saya terlambat dari jam jadwal antrean luring?</span>
-                        <i class="fa-solid fa-chevron-down text-brand-400 transition-transform duration-300"></i>
-                    </button>
-                    <div class="px-6 pb-5 text-sm text-slate-300 border-t border-brand-800/30 pt-4 hidden">
-                        Kami mengimbau pendaftar untuk hadir di lokasi sekolah 15 menit sebelum waktu sesi tiket Anda dimulai. Apabila terpaksa terlambat karena kendala darurat, silakan sampaikan alasan pendaftaran ke helpdesk internal panitia untuk dibantu pengalihan loket sesi terdekat.
+                        Sangat disarankan untuk hadir 15 menit sebelum waktu mulai tiket sesi Anda. Jika terjadi keadaan darurat/terlambat, harap temui meja bantuan (*helpdesk*) panitia di sekolah agar dapat diposisikan pada antrean loket sela yang kosong.
                     </div>
                 </div>
 
@@ -883,6 +1107,7 @@
         </div>
     </section>
 
+    <!-- -->
     <footer class="bg-brand-950 border-t border-brand-800/30 pt-16 pb-8 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-brand-800/30">
@@ -896,7 +1121,7 @@
                         <span class="text-lg font-black text-white">SMKN 2 Purwodadi</span>
                     </div>
                     <p class="text-xs text-slate-300 leading-relaxed">
-                        Sekolah vokasi unggulan rujukan industri di Kabupaten Grobogan dengan fasilitas pengajaran modern berbasis digital dan pengembangan karakter mandiri profesional.
+                        Sekolah menengah kejuruan negeri rujukan industri di Kabupaten Grobogan dengan sistem pembelajaran digital modern berintegritas tinggi.
                     </p>
                     <div class="text-xs text-slate-300 space-y-1">
                         <p class="font-semibold text-white"><i class="fa-solid fa-location-dot text-brand-400 mr-1.5"></i> Alamat Kampus:</p>
@@ -908,11 +1133,11 @@
                 <div class="space-y-4">
                     <h4 class="text-sm font-bold text-white uppercase tracking-wider">Navigasi Informasi</h4>
                     <ul class="space-y-2 text-xs text-slate-400">
-                        <li><a href="#beranda" class="hover:text-brand-300 transition-colors">Beranda</a></li>
-                        <li><a href="#jurusan" class="hover:text-brand-300 transition-colors">Pilihan Jurusan</a></li>
-                        <li><a href="#jalur" class="hover:text-brand-300 transition-colors">Aturan Kuota Penerimaan</a></li>
-                        <li><a href="#jadwal" class="hover:text-brand-300 transition-colors">Lini Masa Kegiatan</a></li>
-                        <li><a href="#alur" class="hover:text-brand-300 transition-colors">Prosedur Pendaftaran</a></li>
+                        <li><a href="#beranda" class="hover:text-brand-300 transition-colors">Beranda Utama</a></li>
+                        <li><a href="#jurusan" class="hover:text-brand-300 transition-colors">Program Kejuruan</a></li>
+                        <li><a href="#alur" class="hover:text-brand-300 transition-colors">10 Tahapan Alur</a></li>
+                        <li><a href="#jadwal" class="hover:text-brand-300 transition-colors">12 Lini Masa Agenda</a></li>
+                        <li><a href="#jalur" class="hover:text-brand-300 transition-colors">Kalkulasi Kuota</a></li>
                     </ul>
                 </div>
 
@@ -927,68 +1152,70 @@
                         </li>
                         <li>
                             <a href="https://nomerantrian.smkn2purwodadi.my.id" target="_blank" class="hover:text-brand-300 font-semibold text-brand-300 transition-colors flex items-center gap-1.5">
-                                <i class="fa-solid fa-ticket text-brand-400"></i> Antrean Verifikasi SMKN 2
+                                <i class="fa-solid fa-ticket text-brand-400"></i> Ambil Antrean Verifikasi
                             </a>
                         </li>
                         <li>
                             <a href="http://www.smkn2purwodadi.my.id" class="hover:text-brand-300 transition-colors flex items-center gap-1.5">
-                                <i class="fa-solid fa-house text-brand-400"></i> Beranda Utama SMKN 2
+                                <i class="fa-solid fa-house text-brand-400"></i> Beranda SMKN 2 Purwodadi
                             </a>
                         </li>
                         <li>
                             <a href="https://grobogan.go.id" target="_blank" class="hover:text-brand-300 transition-colors flex items-center gap-1.5">
-                                <i class="fa-solid fa-arrow-up-right-from-square text-brand-400"></i> Pemerintah Kab. Grobogan
+                                <i class="fa-solid fa-arrow-up-right-from-square text-brand-400"></i> Pemkab Grobogan
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Kontak WA Hubungi Panitia (Helpdesk Biru/Sian) -->
+                <!-- Kontak WA Hubungi Panitia (Helpdesk Biru) -->
                 <div class="space-y-4">
-                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Helpdesk PPDB SMKN 2</h4>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Helpdesk Panitia Lokal</h4>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Jika Anda membutuhkan bantuan teknis terkait proses pengajuan antrean lokal atau verifikasi berkas, hubungi Admin Helpdesk kami.
+                        Jika menemui kendala teknis pendaftaran sistem antrean lokal, silakan hubungi tim administrasi sekolah kami.
                     </p>
                     <div class="space-y-2">
                         <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-2 bg-brand-900/40 hover:bg-brand-800/40 text-brand-300 border border-brand-800 px-4 py-2 rounded-lg text-xs font-semibold w-full transition-all">
                             <i class="fa-brands fa-whatsapp text-base"></i>
-                            <span>Helpdesk 1: 0812-3456-7890</span>
+                            <span>Admin Helpdesk 1: 0812-3456-7890</span>
                         </a>
                         <a href="https://wa.me/6289876543210" target="_blank" class="inline-flex items-center gap-2 bg-brand-900/40 hover:bg-brand-800/40 text-brand-300 border border-brand-800 px-4 py-2 rounded-lg text-xs font-semibold w-full transition-all">
                             <i class="fa-brands fa-whatsapp text-base"></i>
-                            <span>Helpdesk 2: 0898-7654-3210</span>
+                            <span>Admin Helpdesk 2: 0898-7654-3210</span>
                         </a>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Bagian Kaki Bawah, Hak Cipta, Tombol Bagikan -->
+            <!-- Bagian Hak Cipta & Bagikan -->
             <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
                 <p class="text-center sm:text-left">
-                    &copy; 2026 <a href="http://www.smkn2purwodadi.my.id" class="text-white hover:underline font-semibold">SMK Negeri 2 Purwodadi</a>. Hak Cipta Dilindungi.
+                    &copy; 2026 <a href="http://www.smkn2purwodadi.my.id" class="text-white hover:underline font-semibold">SMK Negeri 2 Purwodadi</a>. Seluruh Hak Cipta Dilindungi.
                 </p>
                 <div class="flex items-center gap-4">
-                    <span>Sistem Hub Informasi SPMB Jateng 2026 Mandiri</span>
+                    <span>Transkrip Informasi ALUR PENDAFTARAN.jpg & FLEYER 2.jpg.jpeg</span>
                     <span>&bull;</span>
                     <button onclick="copyWebAddress()" class="hover:text-white transition-colors flex items-center gap-1 focus:outline-none">
-                        <i class="fa-regular fa-copy"></i> Bagikan Website
+                        <i class="fa-regular fa-copy"></i> Salin Link
                     </button>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div class="fixed bottom-6 right-6 z-40">
+    <!-- Floating Sticky Button Ambil Antrean (Mobile & Desktop) -->
+    <div class="fixed bottom-6 right-6 z-45">
         <a href="https://nomerantrian.smkn2purwodadi.my.id" target="_blank" rel="noopener noreferrer"
            class="flex items-center justify-center gap-2 w-14 h-14 md:w-auto md:px-5 md:py-3.5 bg-gradient-to-r from-accent-blue to-brand-500 hover:from-brand-600 hover:to-accent-blue text-white font-extrabold rounded-full md:rounded-xl shadow-2xl shadow-brand-500/30 hover:shadow-brand-500/50 transition-all transform hover:-translate-y-1 active:translate-y-0 group">
-            <i class="fa-solid fa-ticket-simple text-xl group-hover:rotate-12 transition-transform"></i>
+            <i class="fa-solid fa-ticket text-xl group-hover:rotate-12 transition-transform"></i>
             <span class="hidden md:inline text-sm uppercase tracking-wider">Ambil Antrian</span>
         </a>
     </div>
 
+    <!-- -->
     <script>
-        // 1. Logika Toggle Navigasi Menu Mobile
+        // 1. Logika Navigasi Menu Mobile
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -1002,7 +1229,6 @@
             }
         });
 
-        // Menutup menu mobile saat salah satu link diklik
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -1011,7 +1237,7 @@
             });
         });
 
-        // 2. Efek Desain Navigasi Melayang saat Scroll Halaman
+        // 2. Efek Desain Navigasi Melayang saat Scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -1023,15 +1249,13 @@
             }
         });
 
-        // 3. Hitung Mundur Interaktif (Target: Pembukaan Pembuatan Akun 3 Juni 2026 00:00:00 WIB)
+        // 3. Hitung Mundur Pembukaan Pembuatan Akun (Target: 3 Juni 2026 00:00:00 WIB)
         function updateCountdown() {
-            // Setup target pembukaan pembuatan akun 3 Juni 2026 GMT+7
             const targetDate = new Date('June 3, 2026 00:00:00 GMT+0700').getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
 
             if (difference < 0) {
-                // Skenario apabila target waktu telah terlampaui
                 document.getElementById('timer-days').textContent = '00';
                 document.getElementById('timer-hours').textContent = '00';
                 document.getElementById('timer-minutes').textContent = '00';
@@ -1044,18 +1268,16 @@
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            // Tampilkan dengan format penambahan angka nol di depan (2 digit)
             document.getElementById('timer-days').textContent = days.toString().padStart(2, '0');
             document.getElementById('timer-hours').textContent = hours.toString().padStart(2, '0');
             document.getElementById('timer-minutes').textContent = minutes.toString().padStart(2, '0');
             document.getElementById('timer-seconds').textContent = seconds.toString().padStart(2, '0');
         }
 
-        // Jalankan sinkronisasi penghitung waktu setiap detik
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // 4. Logika Kalkulator Alokasi Pagu Daya Tampung Otomatis (SMK Jawa Tengah)
+        // 4. Kalkulator Alokasi Pagu Daya Tampung Otomatis
         const inputQuota = document.getElementById('input-quota');
         const calcPrestasi = document.getElementById('calc-prestasi');
         const calcAfirmasi = document.getElementById('calc-afirmasi');
@@ -1065,13 +1287,13 @@
             let total = parseInt(inputQuota.value) || 0;
             if (total < 0) total = 0;
 
-            // Berdasarkan peraturan SMK:
+            // Aturan PPDB SMK:
             // - Jalur Prestasi: Minimal 75%
-            // - Jalur Afirmasi: Minimal 15%
-            // - Jalur Jarak Domisili Terdekat: Maksimal 10%
+            // - Jalur Afirmasi: Maksimal 15%
+            // - Jalur Domisili Terdekat: Maksimal 10%
             const prestasiSeats = Math.round(total * 0.75);
             const afirmasiSeats = Math.round(total * 0.15);
-            const domisiliSeats = total - (prestasiSeats + afirmasiSeats); // Menyesuaikan pembulatan sisa kursi
+            const domisiliSeats = total - (prestasiSeats + afirmasiSeats); // Menyeimbangkan sisa pembulatan
 
             calcPrestasi.textContent = `${prestasiSeats} Kursi`;
             calcAfirmasi.textContent = `${afirmasiSeats} Kursi`;
@@ -1086,10 +1308,8 @@
             const faqContent = button.nextElementSibling;
             const chevron = button.querySelector('.fa-chevron-down');
             
-            // Toggle Status Visibilitas
             faqContent.classList.toggle('hidden');
             
-            // Transisi Rotasi Ikon Indikator
             if (faqContent.classList.contains('hidden')) {
                 chevron.style.transform = 'rotate(0deg)';
                 button.parentElement.classList.remove('bg-brand-900/40', 'border-brand-500/40');
@@ -1099,7 +1319,7 @@
             }
         }
 
-        // 6. Utilitas Copy Paste Berbagi URL Website
+        // 6. Utilitas Salin Alamat Website Mandiri
         function copyWebAddress() {
             const tempInput = document.createElement('input');
             tempInput.value = 'www.smkn2purwodadi.my.id';
@@ -1108,19 +1328,16 @@
             document.execCommand('copy');
             document.body.removeChild(tempInput);
 
-            // Membuat visualisasi custom notification toast berbalut warna biru
             const toast = document.createElement('div');
             toast.className = 'fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-brand-800 to-brand-600 text-white font-bold px-6 py-3 rounded-xl shadow-2xl z-50 text-sm flex items-center gap-2 border border-brand-500/30 transition-all opacity-0 scale-95';
-            toast.innerHTML = '<i class="fa-solid fa-circle-check text-brand-300"></i> Alamat Website Berhasil Disalin!';
+            toast.innerHTML = '<i class="fa-solid fa-circle-check text-brand-300"></i> Alamat Domain Berhasil Disalin!';
             document.body.appendChild(toast);
 
-            // Animasi transisi in
             setTimeout(() => {
                 toast.classList.remove('opacity-0', 'scale-95');
                 toast.classList.add('opacity-100', 'scale-100');
             }, 10);
 
-            // Tutup dan bersihkan notifikasi setelah 3 detik
             setTimeout(() => {
                 toast.classList.remove('opacity-100', 'scale-100');
                 toast.classList.add('opacity-0', 'scale-95');
@@ -1130,18 +1347,24 @@
             }, 3000);
         }
 
-        // 7. Pengolahan Status Jadwal Terhadap Waktu Nyata (Menggunakan Waktu Sistem PPDB 2026 Saat Ini)
+        // 7. Pengolahan Status Lini Masa 12 Agenda Terhadap Waktu Nyata
         function analyzeScheduleStatus() {
             const now = new Date();
             
-            // Konfigurasi Target Tanggal Agenda Regulasi 2026 (Format ISO Local)
+            // Mengikuti rentang waktu asli 12 Tanggal Penting dari FLEYER 2.jpg.jpeg (Semua Target Tahun 2026)
             const agendaDates = [
-                { id: 1, start: new Date('2026-06-03T00:00:00'), end: new Date('2026-06-12T23:59:59') }, // Pengajuan Akun
-                { id: 2, start: new Date('2026-06-04T00:00:00'), end: new Date('2026-06-13T23:59:59') }, // Verifikasi Akun
-                { id: 3, start: new Date('2026-06-04T00:00:00'), end: new Date('2026-06-13T23:59:59') }, // Aktivasi Akun
-                { id: 4, start: new Date('2026-06-15T00:00:00'), end: new Date('2026-06-18T23:59:59') }, // Daftar Sekolah
-                { id: 5, start: new Date('2026-06-21T00:00:00'), end: new Date('2026-06-21T23:59:59') }, // Hasil Seleksi SPMB
-                { id: 6, start: new Date('2026-06-22T08:00:00'), end: new Date('2026-06-25T15:00:00') }  // Daftar Ulang
+                { id: 1, start: new Date('2026-05-18T00:00:00'), end: new Date('2026-05-18T23:59:59') }, // Pengumuman
+                { id: 2, start: new Date('2026-06-03T00:00:00'), end: new Date('2026-06-12T23:59:59') }, // Pembuatan akun
+                { id: 3, start: new Date('2026-06-04T00:00:00'), end: new Date('2026-06-13T23:59:59') }, // Verifikasi berkas
+                { id: 4, start: new Date('2026-06-04T00:00:00'), end: new Date('2026-06-13T23:59:59') }, // Aktivasi Akun
+                { id: 5, start: new Date('2026-06-14T00:00:00'), end: new Date('2026-06-14T23:59:59') }, // Sinkronisasi Data
+                { id: 6, start: new Date('2026-06-15T00:00:00'), end: new Date('2026-06-18T23:59:59') }, // Pendaftaran/Pemilihan
+                { id: 7, start: new Date('2026-06-19T00:00:00'), end: new Date('2026-06-20T23:59:59') }, // Evaluasi
+                { id: 8, start: new Date('2026-06-21T00:00:00'), end: new Date('2026-06-21T23:59:59') }, // Pengumuman Hasil
+                { id: 9, start: new Date('2026-06-22T00:00:00'), end: new Date('2026-06-25T23:59:59') }, // Daftar Ulang
+                { id: 10, start: new Date('2026-06-26T00:00:00'), end: new Date('2026-06-26T23:59:59') }, // Pengumuman Cadangan
+                { id: 11, start: new Date('2026-06-29T00:00:00'), end: new Date('2026-06-30T23:59:59') }, // Daftar Ulang Cadangan
+                { id: 12, start: new Date('2026-07-13T00:00:00'), end: new Date('2026-07-13T23:59:59') }  // Awal Ajaran Baru
             ];
 
             agendaDates.forEach(agenda => {
@@ -1152,24 +1375,24 @@
 
                 if (now > agenda.end) {
                     badge.textContent = 'Selesai';
-                    badge.className = 'bg-brand-900 text-brand-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider';
+                    badge.className = 'bg-brand-900/60 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider';
                     if (dot) {
-                        dot.className = 'w-2.5 h-2.5 rounded-full bg-brand-700';
+                        dot.className = 'w-2.5 h-2.5 rounded-full bg-brand-800';
                     }
                 } else if (now >= agenda.start && now <= agenda.end) {
                     badge.textContent = 'Sedang Berlangsung';
                     badge.className = 'bg-accent-blue text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider animate-pulse';
                     if (element) {
-                        element.classList.add('border-l-2', 'border-brand-400');
+                        element.classList.add('border-l-2', 'border-brand-400', 'bg-brand-900/30');
                     }
                     if (dot) {
                         dot.className = 'w-2.5 h-2.5 rounded-full bg-brand-400 animate-ping';
                     }
                 } else {
                     badge.textContent = 'Mendatang';
-                    badge.className = 'bg-brand-950 text-slate-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider';
+                    badge.className = 'bg-brand-950 text-brand-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider border border-brand-800/40';
                     if (dot) {
-                        dot.className = 'w-2.5 h-2.5 rounded-full bg-brand-800';
+                        dot.className = 'w-2.5 h-2.5 rounded-full bg-brand-500';
                     }
                 }
             });
